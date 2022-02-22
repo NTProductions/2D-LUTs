@@ -22,11 +22,11 @@ _A Look-Up Table is a set of pre-computed data which can make your code faster_
 ##### A straight line (the default) can represented by the equation y = x
 
 #### We can use other mathematical equations to create different curves and appearances
-*y = x^2*
+### y = x^2
 <img src="https://i.imgur.com/Gak7lIO.png" />
-*y = x^3*
+### y = x^3
 <img src="https://i.imgur.com/9xB4Pv8.png" />
-*y = sqrt(x)*
+### y = sqrt(x)
 <img src="https://i.imgur.com/aYRe0aQ.png" />
 
         
