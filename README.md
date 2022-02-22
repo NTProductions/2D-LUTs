@@ -6,21 +6,21 @@
 ## What is a LUT?
 
 _A Look-Up Table is a set of pre-computed data which can make your code faster_
-<br>
+<br />
 Instead of calculating a complex algorithm for every pixel, we can precompute data, and search for an index instead of algorithms
-<br>
+<br />
 Usually a LUT is organised int a file in rows/columns, and the depth and complexity of this is based on the type of LUT
-<br>
+<br />
 When dealing with Adobe programs, we are usually referring to Colour Correction/Grading LUTs, which in one form or another are effects or files you apply to clips. This can be a .lut or .cube file
-<br>
+<br />
 In the realm of these LUTs (which this tutorial is primarily about), there are 2D and 3D LUTs. A 2D LUT is one which has an input value, processed using an algorithm, into an output value. A 3D lut takes 3 input values, processes them into a single index, and process them into a 3 outputs. 
-<br>
+<br />
 I will discuss all about 3D LUTs in a future tutorial, and show you how complex and powerful they are.
-<br>
+<br />
 The curves adjustment is a visual representation of a 2D LUT, with the Y axis being the input intensity, and the X being the output intensity for any given channel
-<br>
+<br />
 A straight line (the default) can represented by the equation y = x
-<br>
+<br />
 We can use other mathematical equations to create different curves and appearances
 **y = x^2**
 **y = sqrt(x)**
@@ -39,12 +39,12 @@ Using 8/16 bits is simple, with ranges of 0-255 and 0-32678
 
 ```y = .5 * .5 = 0.25```
 
- This means that your input would half, instead of being squared. To get around this, when using 32 bit pixels, multiply them by 255 or 32678 before applying your calculations. Then after, divide to commutate back to the original range. There's also no need to clamp in 32bpc most of the time, since it will allow you have overbrights
+ This means that your input would half, instead of being squared. To get around this, when using 32 bit pixels, multiply them by 255 or 32678 before applying your calculations. Then after, divide to commutate back to the original range. There's also no need to clamp in 32bpc most of the time, since it will allow you have overbr /ights
  
 ```
         y = (.5*255)*(.5*255)
         y = 16256.25 / 255 = 63.75
-        // 63.75 is VERY bright, maybe you want to reduce that a bit
+        // 63.75 is VERY br /ight, maybe you want to reduce that a bit
 ```
         All that math is what is pre-computed into the LUT file, so you don't have to compute these heavy mathematical equations millions of times per image. Instead we will calculate what the output should be for every possible input. We need to pre-decide how many different values we use. 
 
