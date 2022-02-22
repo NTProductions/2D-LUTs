@@ -227,5 +227,7 @@ applyLUT() {
 #### You can update the hardcoded LUT file path, install the plugin, and apply it to a layer by going to Effect -> NT Productions -> 2D LUT
 
 ### x^3 LUT
+
 <img src="https://i.imgur.com/nLFvGfR.png" title="before" />
+
 <img src="https://i.imgur.com/rCYrx9S.png" title="after" />
