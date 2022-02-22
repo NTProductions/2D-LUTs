@@ -1,7 +1,6 @@
 # 2D-LUTs
  _A detailed overview of 2D LUTs and implementing them to an AE Plugin_
 
-### 2D LUTs
 
 ## What is a LUT?
 
