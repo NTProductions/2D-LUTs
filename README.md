@@ -22,14 +22,18 @@ _A Look-Up Table is a set of pre-computed data which can make your code faster_
 ##### A straight line (the default) can represented by the equation y = x
 
 #### We can use other mathematical equations to create different curves and appearances
-**y = x^2**
-**y = sqrt(x)**
-**y = x^3**
+*y = x^2*
+<img src="https://i.imgur.com/Gak7lIO.png" />
+*y = x^3*
+<img src="https://i.imgur.com/9xB4Pv8.png" />
+*y = sqrt(x)*
+<img src="https://i.imgur.com/aYRe0aQ.png" />
+
         
 ##### The input pixel's intensity (let's say the rgb intensity/luma) is x. You can plugin for x, solve for y, and have your output
-**y = 32^2**
-**y = 32 * 32**
-**y = 1024;**
+*y = 32^2*
+**y = 32 * 32*
+*y = 1024;*
 
 _This is far beyond the 0-255 range, so we clamp it back between (0-255)_
         
@@ -145,6 +149,8 @@ lutFile.close();
 
 
 ##### We have now precomputed the square root of the input 100 thousand times. This may not seem like a lot of time saved, but if you are doing large amounts of iterations or a much more complex algorithm (which is common in higher order LUTs), the time saved can save ample computation time. 
+
+## Reading our LUT file
 
 ##### Lastly, we need to be able to read this data back in. Let's say at this point you've automated the creation of 100 2D LUT files, and you want to be able to read them back in. This is where it could get fun. The possibilities for a 2D LUT are seemingly limitless. The input could be anything, a slider value, a pixel's luminance, a pixel's red intensity, anything that has a single dimensional value. For the purposes of this, let's assume our LUT is to adjust the look of an image. We can apply the single dimensional output for any given input, to the R, G, and B channels to apply our LUT.
 
