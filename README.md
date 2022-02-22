@@ -171,7 +171,7 @@ floor(.5/1.0*10000)
 
 ##### If we create an array that holds each row of our LUT file in each of its indicies, we can apply our LUT with basically 1 line of code (per channel)
 
-```
+```c++
 applyLUT() {
     var lutFile = File();
 
@@ -190,7 +190,7 @@ applyLUT() {
 
 ##### For example, if our input value gives us row 5000.54321, although this isn't a valid row, neither is row 5000 or 5001 technically accurate for this result. The solution is interpolation. If row 5000 gives an a precomputed output of .71 and row 5001 .735, we can interpolate between the min and max (.71 and .735), at the point our 5000.54321 input would be. This would look like this:
 
-```
+```c++
 applyLUT() {
     var lutFile = File();
 
