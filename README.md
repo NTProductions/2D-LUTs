@@ -93,7 +93,7 @@ _This is far beyond the 0-255 range, so we clamp it back between (0-255)_
 
 ##### lets write the LUT file
 
-```
+```JavaScript
 var lutFile = File("~/Documents/myLUT.cube");
 
 var numSteps = 100000;
@@ -218,5 +218,14 @@ applyLUT() {
         outP->blue = LUTArrayData[Math.floor(inP->blue/1.0*10000)];
     }
     outP->alpha = 1.0;
-}
-```
+}```
+
+#### All the above C++ code was me writing some experimental code, you can see the attached 2D LUT plugin and source code to see the full code
+
+## AE Plugin
+
+#### You can update the hardcoded LUT file path, install the plugin, and apply it to a layer by going to Effect -> NT Productions -> 2D LUT
+
+### x^3 LUT
+<img src="https://i.imgur.com/nLFvGfR.png" title="before" />
+<img src="https://i.imgur.com/rCYrx9S.png" title="after" />
