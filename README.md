@@ -24,16 +24,17 @@ _A Look-Up Table is a set of pre-computed data which can make your code faster_
 #### We can use other mathematical equations to create different curves and appearances
 ### y = x^2
 <img src="https://i.imgur.com/Gak7lIO.png" />
+
 ### y = x^3
 <img src="https://i.imgur.com/9xB4Pv8.png" />
+
 ### y = sqrt(x)
 <img src="https://i.imgur.com/aYRe0aQ.png" />
-
         
 ##### The input pixel's intensity (let's say the rgb intensity/luma) is x. You can plugin for x, solve for y, and have your output
-*y = 32^2*
-**y = 32 * 32*
-*y = 1024;*
+### y = 32^2
+### y = 32 * 32
+### y = 1024;
 
 _This is far beyond the 0-255 range, so we clamp it back between (0-255)_
         
@@ -41,7 +42,7 @@ _This is far beyond the 0-255 range, so we clamp it back between (0-255)_
 
 ##### But 32 bpc, being 0.0-1.0 causes issues when doing squares and square roots. For example, say out input is .5
 
-```y = .5 * .5 = 0.25```
+### y = .5 * .5 = 0.25
 
 ##### This means that your input would half, instead of being squared. To get around this, when using 32 bit pixels, multiply them by 255 or 32678 before applying your calculations. Then after, divide to commutate back to the original range. There's also no need to clamp in 32bpc most of the time, since it will allow you have overbr /ights
  
