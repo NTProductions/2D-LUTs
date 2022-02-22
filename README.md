@@ -218,7 +218,8 @@ applyLUT() {
         outP->blue = LUTArrayData[Math.floor(inP->blue/1.0*10000)];
     }
     outP->alpha = 1.0;
-}```
+}
+```
 
 #### All the above C++ code was me writing some experimental code, you can see the attached 2D LUT plugin and source code to see the full code
 
